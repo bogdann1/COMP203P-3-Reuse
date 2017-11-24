@@ -7,10 +7,11 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import ucl.cs.matchers.IterableBeginsWith;
+import ucl.cs.templatemethod.*;
 
 public class FibonacciSequenceTest {
 
-  final FibonacciSequence sequence = new FibonacciSequence();
+  final NumberSequence sequence = new NumberSequence(new FibonacciTermGenerator());
 
   @Test
   public void definesFirstTwoTermsToBeOne() {
